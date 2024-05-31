@@ -1,4 +1,4 @@
-name: Deploy MkDocs
+name: Deploy MkDocs Site to VPS
 
 on:
   push:
@@ -25,7 +25,19 @@ jobs:
           pip install -r requirements.txt
           pip install mkdocs mkdocs-material mkdocs-macros-plugin
 
-      - name: Deploy to GitHub Pages
+      - name: Build MkDocs site
         run: |
           source venv/bin/activate
-          mkdocs gh-deploy --force
+          mkdocs build
+
+      - name: Deploy to VPS
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          VPS_IP: ${{ secrets.VPS_IP }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H "$VPS_IP" >> ~/.ssh/known_hosts
+          scp -r site/* your-user@"$VPS_IP":/var/www/my-mkdocs-site/
+          ssh your-user@"$VPS_IP" 'sudo systemctl restart nginx'
