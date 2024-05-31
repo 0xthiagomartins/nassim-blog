@@ -1,19 +1,19 @@
+# Use an official Python runtime as a parent image
 FROM python:3.9-slim
 
 # Set the working directory in the container
-WORKDIR /src
+WORKDIR /app/blog
 
-# Copy the current directory contents into the container at /app
-COPY . /src
-
-# Install MkDocs and other dependencies
+# Copy the requirements file and install dependencies
+COPY requirements.txt /app/blog
+RUN pip install -r requirements.txt
 RUN pip install mkdocs mkdocs-material mkdocs-macros-plugin
+
+# Copy the application files
+COPY src /app/blog/src
 
 # Make port 8082 available to the world outside this container
 EXPOSE 8082
 
-# Define environment variable
-ENV PORT 8082
-
 # Run mkdocs serve when the container launches
-CMD ["mkdocs", "serve", "-a", "0.0.0.0:8082"]
+CMD ["mkdocs", "serve", "-f", "/app/blog/src/mkdocs.yml", "-a", "0.0.0.0:8082"]
