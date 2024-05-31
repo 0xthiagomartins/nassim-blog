@@ -31,5 +31,5 @@ jobs:
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "$VPS_IP" >> ~/.ssh/known_hosts
-          scp -r . your-user@"$VPS_IP":/app/blog/
-          ssh your-user@"$VPS_IP" 'cd /app/blog && docker-compose down && docker-compose up -d'
+          scp -r . root@"$VPS_IP":/app/blog/
+          ssh root@"$VPS_IP" 'cd /app/blog && docker-compose down && docker-compose up -d'
