@@ -16,11 +16,9 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      - name: Build and push Docker image
+      - name: Build Docker image
         run: |
           docker build -t blog .
-          docker-compose down
-          docker-compose up -d
 
       - name: Deploy to VPS
         env:
@@ -31,5 +29,6 @@ jobs:
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "$VPS_IP" >> ~/.ssh/known_hosts
-          scp -r . root@"$VPS_IP":/app/blog/
+          scp Dockerfile docker-compose.yml requirements.txt root@"$VPS_IP":/app/blog/
+          scp -r src/ root@"$VPS_IP":/app/blog/src/
           ssh root@"$VPS_IP" 'cd /app/blog && docker-compose down && docker-compose up -d'
