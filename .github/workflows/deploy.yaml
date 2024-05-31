@@ -31,4 +31,4 @@ jobs:
           ssh-keyscan -H "$VPS_IP" >> ~/.ssh/known_hosts
           scp Dockerfile docker-compose.yml requirements.txt root@"$VPS_IP":/app/blog/
           scp -r src/ root@"$VPS_IP":/app/blog/src/
-          ssh root@"$VPS_IP" 'cd /app/blog && docker-compose down && docker-compose up -d'
+          ssh root@"$VPS_IP" 'cd /app/blog && docker-compose -f docker-compose.yml up --build -d'
