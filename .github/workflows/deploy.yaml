@@ -39,5 +39,5 @@ jobs:
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "$VPS_IP" >> ~/.ssh/known_hosts
-          scp -r site/* your-user@"$VPS_IP":/var/www/my-mkdocs-site/
-          ssh your-user@"$VPS_IP" 'sudo systemctl restart nginx'
+          scp -r site/* root@"$VPS_IP":/var/www/my-mkdocs-site/
+          ssh root@"$VPS_IP" 'sudo systemctl restart nginx'
