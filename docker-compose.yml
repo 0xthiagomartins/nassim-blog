@@ -8,3 +8,4 @@ services:
       - ./src:/app/blog/src
     environment:
       - PORT=8082
+    command: python run.py 8082
