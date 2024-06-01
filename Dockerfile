@@ -11,7 +11,7 @@ RUN apk add --no-cache --virtual .build-deps gcc musl-dev libffi-dev \
     && pip install --no-cache-dir -r requirements.txt \
     && apk del .build-deps
 
-RUN python ./src/generate_categories.py
+RUN python src/generate_categories.py
 
 
 # Make port 8082 available to the world outside this container
