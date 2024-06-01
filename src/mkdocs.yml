@@ -1,13 +1,18 @@
 site_name: Nassim Blog
-theme:
-  name: material
+theme: readthedocs
 plugins:
   - search
   - macros
+  - markdown-include
+  - awesome-pages
+
 nav:
   - Home: index.md
   - Posts:
       - "DAG-based DLT Concepts": posts/dag-based-dlt-concepts.md
+  - Categories:
+      - DLT: categories/dlt/index.md
+      - Software: categories/software/index.md
 
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css

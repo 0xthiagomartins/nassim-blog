@@ -1,0 +1,36 @@
+name: Update Categories
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build and run Docker container
+        run: |
+          docker-compose build
+          docker-compose up -d
+
+      - name: Generate category indexes
+        run: |
+          docker-compose exec mkdocs python generate_categories.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add src/categories/*
+          git commit -m 'Update category indexes'
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
