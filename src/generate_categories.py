@@ -2,11 +2,8 @@ import os
 import yaml
 from collections import defaultdict
 
-# Path to the posts directory
-POSTS_DIR = "src"
-
-# Path to the categories directory
-CATEGORIES_DIR = "src/categories"
+POSTS_DIR = "posts"
+CATEGORIES_DIR = "categories"
 
 
 # Function to read YAML front matter from a markdown file
@@ -23,13 +20,13 @@ def read_front_matter(file_path):
 
 
 # Create categories directory if not exists
-os.makedirs(CATEGORIES_DIR, exist_ok=True)
+os.makedirs(os.path.join("docs", CATEGORIES_DIR), exist_ok=True)
 
 # Dictionary to store posts by category
 categories = defaultdict(list)
 
 # Scan posts and collect categories
-for root, _, files in os.walk(POSTS_DIR):
+for root, _, files in os.walk(os.path.join("docs", POSTS_DIR)):
     for file in files:
         if file.endswith(".md"):
             file_path = os.path.join(root, file)
@@ -40,7 +37,7 @@ for root, _, files in os.walk(POSTS_DIR):
 
 # Generate index.md for each category
 for category, posts in categories.items():
-    category_dir = os.path.join(CATEGORIES_DIR, category)
+    category_dir = os.path.join("docs", CATEGORIES_DIR, category)
     os.makedirs(category_dir, exist_ok=True)
     with open(os.path.join(category_dir, "index.md"), "w", encoding="utf-8") as f:
         f.write(f"# {category}\n\n")
