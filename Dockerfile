@@ -1,13 +1,17 @@
 # Use an official Python runtime as a parent image
-FROM python:3.11-slim
+FROM python:3.12-alpine
 
 # Set the working directory in the container
-WORKDIR /app/blog
+WORKDIR /app
+ADD . ./
 
 # Copy the requirements file and install dependencies
-COPY requirements.txt /app/blog
-RUN pip install -r requirements.txt
-RUN python src/generate_categories.py
+COPY requirements.txt .
+RUN apk add --no-cache --virtual .build-deps gcc musl-dev libffi-dev \
+    && pip install --no-cache-dir -r requirements.txt \
+    && apk del .build-deps
+
+RUN python /app/src/generate_categories.py
 
 # Copy the application files
 COPY src /app/blog/src

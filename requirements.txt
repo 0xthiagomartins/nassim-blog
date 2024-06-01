@@ -1,3 +1,5 @@
 mkdocs-material 
 mkdocs-macros-plugin
+mkdocs-include-markdown-plugin
+mkdocs-awesome-pages-plugin
 pyyaml

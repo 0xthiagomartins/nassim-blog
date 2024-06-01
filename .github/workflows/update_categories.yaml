@@ -23,7 +23,7 @@ jobs:
 
       - name: Generate category indexes
         run: |
-          docker-compose exec mkdocs python generate_categories.py
+          docker-compose exec mkdocs python src/generate_categories.py
 
       - name: Commit and push changes
         run: |
