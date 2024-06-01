@@ -7,9 +7,7 @@ WORKDIR /app/blog
 # Copy the requirements file and install dependencies
 COPY requirements.txt /app/blog
 RUN pip install -r requirements.txt
-RUN cd src
-RUN python generate_categories.py
-RUN cd ..
+RUN python src/generate_categories.py
 
 # Copy the application files
 COPY src /app/blog/src
