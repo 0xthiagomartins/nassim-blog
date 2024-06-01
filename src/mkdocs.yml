@@ -7,6 +7,7 @@ plugins:
   - awesome-pages
 
 nav:
+  - Home: "https://www.nassim.com.br/"
   - DLT: categories/DLT/index.md
   - Software: categories/Software/index.md
 
