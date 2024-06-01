@@ -7,7 +7,6 @@ WORKDIR /app/blog
 # Copy the requirements file and install dependencies
 COPY requirements.txt /app/blog
 RUN pip install -r requirements.txt
-RUN pip install mkdocs mkdocs-material mkdocs-macros-plugin
 
 # Copy the application files
 COPY src /app/blog/src
