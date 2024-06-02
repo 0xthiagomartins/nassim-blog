@@ -29,6 +29,7 @@ jobs:
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "$VPS_IP" >> ~/.ssh/known_hosts
+          ssh root@"$VPS_IP" 'rm -rf /app/blog/*'
           scp Dockerfile docker-compose.yml requirements.txt root@"$VPS_IP":/app/blog/
           scp -r ./* root@"$VPS_IP":/app/blog/
           ssh root@"$VPS_IP" 'cd /app/blog && docker-compose -f docker-compose.yml up --build -d'
