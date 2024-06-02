@@ -9,6 +9,8 @@ plugins:
 nav:
   - Home: "https://www.nassim.com.br/"
   - DLT: categories/DLT/index.md
+  - Javascript: categories/Javascript/index.md
+
   - Software: categories/Software/index.md
 
 extra_css:

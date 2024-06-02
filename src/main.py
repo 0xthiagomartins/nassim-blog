@@ -16,6 +16,7 @@ def define_env(env):
             for key, value in contacts.items():
                 icon = ""
                 link = value
+                #TODO please thiago, update to payments have icons
                 match key:
                     case "email":
                         icon = "fas fa-envelope"
@@ -29,8 +30,8 @@ def define_env(env):
                     case "telegram":
                         icon = "fab fa-telegram"
                         link = f"https://t.me/{value}"
-                    case "twitter":
-                        icon = "fab fa-twitter"
+                    case "x":
+                        icon = "fab fa-x-twitter"
                         link = f"https://twitter.com/{value}"
                     case "instagram":
                         icon = "fab fa-instagram"
@@ -44,6 +45,7 @@ def define_env(env):
                     case "whatsapp":
                         icon = "fab fa-whatsapp"
                         link = f"https://wa.me/{value}"
+                    
 
                 footer_content += f"    <li><i class='{icon}'></i> <a href='{link}' target='_blank'>{key.capitalize()}: {value}</a></li>\n"
             footer_content += "  </ul>\n"
