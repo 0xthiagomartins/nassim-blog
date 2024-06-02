@@ -11,8 +11,8 @@ contacts:
   linkedin: "0xthiagomartins"
   whatsapp: "+55 (11) 91964-6223"
 donations:
-  bitcoin: "xpto"
   ethereum: "0xE6339c6f56d44719b6ae1264ea9B4f5eD1710bbE"
+  taraxa: "0xE6339c6f56d44719b6ae1264ea9B4f5eD1710bbE"
 date: 2024-05-31
 ---
 
