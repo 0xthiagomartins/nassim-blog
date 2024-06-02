@@ -5,7 +5,7 @@ author: "Thiago Martins"
 contacts:
   email: "thiago.fmartins@outlook.com"
   instagram: "0xthiagomartins"
-  twitter: "0xthiagomartins"
+  x: "0xthiagomartins"
   github: "0xthiagomartins"
   telegram: "thiagofmartins"
   linkedin: "0xthiagomartins"
