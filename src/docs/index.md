@@ -9,7 +9,6 @@ Nassim Blog is your go-to source for deep dives into the world of technology. Fr
 ## Latest Posts
 
 - **[Understanding Blockchain Technology](./posts/blockchain.md)** - Dive into the fundamentals of blockchain and its transformative potential.
-- **[JavaScript ES6 Features You Should Know](./posts/js-es6.md)** - A comprehensive guide to the latest features in JavaScript ES6.
 - **[Building Responsive Websites](./posts/responsive-websites.md)** - Tips and tricks for creating websites that look great on any device.
 - **[Introduction to Machine Learning](./posts/machine-learning.md)** - An introductory guide to the basics of machine learning and its applications.
 
