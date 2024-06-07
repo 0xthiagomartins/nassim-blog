@@ -14,4 +14,4 @@
 
 4. Run server:
 
-    mkdocs serve
+    python3 run.py
