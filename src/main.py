@@ -1,22 +1,28 @@
 import os
 import yaml
 from collections import defaultdict
+import toml
 
 
-def define_env(env):
-    @env.macro
-    def footer(metadata):
-        footer_content = f"<div class='footer'>\n"
-        footer_content += f"  <p><strong>Author:</strong> {metadata['author']}</p>\n"
+def load_authors():
+    with open("src/authors.toml", "r") as file:
+        authors_data = toml.load(file)
+    return authors_data
 
-        if "contacts" in metadata:
-            contacts = metadata["contacts"]
-            footer_content += "  <p><strong>Contacts:</strong></p>\n"
-            footer_content += "  <ul>\n"
+
+class Footer:
+    def __init__(self):
+        self.content = "<div class='footer'>\n"
+
+    def render_contacts(self, author):
+        if "contacts" in author:
+            contacts = author["contacts"]
+            self.content += "  <p><strong>Contacts:</strong></p>\n"
+            self.content += "  <ul>\n"
             for key, value in contacts.items():
                 icon = ""
                 link = value
-                #TODO please thiago, update to payments have icons
+                # TODO please thiago, update to payments have icons
                 match key:
                     case "email":
                         icon = "fas fa-envelope"
@@ -45,15 +51,15 @@ def define_env(env):
                     case "whatsapp":
                         icon = "fab fa-whatsapp"
                         link = f"https://wa.me/{value}"
-                    
 
-                footer_content += f"    <li><i class='{icon}'></i> <a href='{link}' target='_blank'>{key.capitalize()}: {value}</a></li>\n"
-            footer_content += "  </ul>\n"
+                self.content += f"    <li><i class='{icon}'></i> <a href='{link}' target='_blank'>{key.capitalize()}: {value}</a></li>\n"
+            self.content += "  </ul>\n"
 
-        if "donations" in metadata:
-            donations = metadata["donations"]
-            footer_content += "  <p><strong>Donations:</strong></p>\n"
-            footer_content += "  <ul>\n"
+    def render_donations(self, author):
+        if "donations" in author:
+            donations = author["donations"]
+            self.content += "  <p><strong>Donations:</strong></p>\n"
+            self.content += "  <ul>\n"
             for key, value in donations.items():
                 match key:
                     case "bitcoin":
@@ -67,10 +73,32 @@ def define_env(env):
                     case "nano":
                         link = f"nano:{value}"
 
-                footer_content += f"    <li>{key.capitalize()}: {value}</li>\n"
-            footer_content += "  </ul>\n"
+                self.content += f"    <li>{key.capitalize()}: {value}</li>\n"
+            self.content += "  </ul>\n"
 
-        footer_content += f"  <p><strong>Date:</strong> {metadata['date']}</p>\n"
-        footer_content += "</div>\n"
 
-        return footer_content
+def define_env(env):
+    authors = load_authors()
+
+    @env.macro
+    def footer(metadata):
+        footer = Footer()
+
+        if "authors" in metadata:
+            footer.content += "<p><strong>Authors:</strong></p>\n<ul>\n"
+            for author_id in metadata["authors"]:
+                author = authors.get(author_id, {})
+                footer.content += f"<li>{author.get('name', 'Unknown Author')}\n"
+                footer.content += (
+                    f"    <p>{author.get('description', 'No description')}</p>\n"
+                )
+                footer.content += f"    <img src='{author.get('avatar', '')}' alt='Avatar' style='width:50px; height:50px;'>\n"
+                footer.content += "</li>\n"
+                footer.content += "</ul>\n"
+                footer.render_contacts(author)
+                footer.render_donations(author)
+
+            footer.content += f"  <p><strong>Date:</strong> {metadata['date']}</p>\n"
+            footer.content += "</div>\n"
+
+        return footer.content

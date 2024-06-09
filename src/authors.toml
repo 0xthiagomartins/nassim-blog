@@ -1,0 +1,13 @@
+[0xthiagomartins]
+name = "Thiago Martins"
+description = "Software Developer"
+avatar = "http://github.com/0xthiagomartins.png"
+contacts = { email = "thiago.fmartins@outlook.com", instagram = "0xthiagomartins", x = "0xthiagomartins", github = "0xthiagomartins", telegram = "thiagofmartins", linkedin = "0xthiagomartins", whatsapp = "+55 (11) 91964-6223" }
+donations = { ethereum = "0xE6339c6f56d44719b6ae1264ea9B4f5eD1710bbE", taraxa = "0xE6339c6f56d44719b6ae1264ea9B4f5eD1710bbE" }
+
+[samuelpoiani]
+name = "Samuel Poiani"
+description = "Software Developer"
+avatar = "http://github.com/SamuelPoiani.png"
+contacts = { email = "samuel.poiani@example.com", instagram = "samuelpoiani", x = "samuelpoiani", github = "samuelpoiani", telegram = "samuelpoiani", linkedin = "samuelpoiani", whatsapp = "+55 (11) 91964-6223" }
+donations = { ethereum = "0xE6339c6f56d44719b6ae1264ea9B4f5eD1710bbE", taraxa = "0xE6339c6f56d44719b6ae1264ea9B4f5eD1710bbE" }
