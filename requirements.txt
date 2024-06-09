@@ -4,3 +4,4 @@ mkdocs-include-markdown-plugin
 mkdocs-awesome-pages-plugin
 mkdocs-bootswatch
 pyyaml
+toml
