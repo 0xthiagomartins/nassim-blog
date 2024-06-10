@@ -36,9 +36,9 @@ class Footer:
                     case "telegram":
                         icon = "fab fa-telegram"
                         link = f"https://t.me/{value}"
-                    case "x":
-                        icon = "fab fa-x-twitter"
-                        link = f"https://twitter.com/{value}"
+                    case "x" | "twitter" | "X":
+                        icon = "fab fa-twitter"
+                        link = f"https://x.com/{value}"
                     case "instagram":
                         icon = "fab fa-instagram"
                         link = f"https://instagram.com/{value}"
@@ -51,7 +51,6 @@ class Footer:
                     case "whatsapp":
                         icon = "fab fa-whatsapp"
                         link = f"https://wa.me/{value}"
-
                 self.content += f"    <li><i class='{icon}'></i> <a href='{link}' target='_blank'>{key.capitalize()}: {value}</a></li>\n"
             self.content += "  </ul>\n"
 
