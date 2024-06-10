@@ -1,4 +1,4 @@
-# Nassim Blog
+# Blog
 
 Welcome to the Nassim Blog! Explore insightful articles on technology, programming, and beyond.
 

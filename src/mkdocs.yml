@@ -1,9 +1,12 @@
-site_name: Nassim Blog
+site_name: Blog
 theme:
   name: material # lux
   palette:
     primary: nassim_primary
     accent: nassim_accent
+  logo: assets/imgs/white_logo.png
+  favicon: assets/imgs/favicon.png
+
 plugins:
   - search
   - macros
@@ -23,3 +26,4 @@ extra_css:
 
 extra:
   generator: false
+  homepage: https://nassim.com.br
