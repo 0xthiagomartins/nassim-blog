@@ -10,11 +10,11 @@ date: 2024-06-10
 ---
 # Data
 
-In common usage, data are a collection of discrete or continuous values that convey information, describing the quantity, quality, facts, statiscs, other **basic units of meaning**, or simply sequences of symbols that may be further interpreted formally.
+In common usage, data are a collection of discrete or continuous values that convey information, describing the quantity, quality, facts, statistics, other **basic units of meaning**, or simply sequences of symbols that may be further interpreted formally.
 
 <!-- more -->
 
-A **datum** is an individual value value in a collection of data. Data are usuallyorganized into structures such as tables that provide additional context and meaning, and which may themselves be used as data in larger structures. 
+A **datum** is an individual value value in a collection of data. Data are usually organized into structures such as tables that provide additional context and meaning, and which may themselves be used as data in larger structures. 
 
 Data may be used as variables in a computational process. Data may represent abstract ideas or concrete measurements. Data are commonly used in scientific research, economics, and in virtually every other form of human organizational activity. Examples of data sets include price indices (such as consumer price index), unemployment rates, literacy rates, and census data. In this context, data represent the raw facts and figures from which useful information can be extracted.
 
@@ -81,18 +81,18 @@ As a reference architecture is abstract and designed with generality in mind, it
 
 ### Acquisition (Collection and/or Extraction)
 
-Data are acquisited using techniques such as measurement, observation, query or analysis, and are typically represented as numbers or characters which may be further processed.
+Data are acquitted using techniques such as measurement, observation, query or analysis, and are typically represented as numbers or characters which may be further processed.
 
-Gathering data can be accomplished through a primary source (the research is the first person to obtain the data) or a secondary source (the researcher obtains the data that has already been acquisited by other sources, such as data disseminated in a scientific journal).
+Gathering data can be accomplished through a primary source (the research is the first person to obtain the data) or a secondary source (the researcher obtains the data that has already been acquitted by other sources, such as data disseminated in a scientific journal).
 
-1. **Field data** are data that are gathered in an uncontrolled in-situ enviroment.
+1. **Field data** are data that are gathered in an uncontrolled in-situ environment.
 2. **Experimental data** are data that are generated in the course of a controlled scientific experiment.
 
 We have two types of the data acquisition:
 
-1. **Collection** is the acquisition of data in **motion**. The acquisition includes capabalities to "subscribe" to a data stream or to simulate the stream via quickly repeating API calls. if it is subscribed then data will be pushed  to it. Once the data is collected, it may then store it temporarily in-memory or a disk before passing it to Stream processor for near real-time processing of data. Data can also go through filtration before it being fed to the Stream processor. Data Collection aims at acquiring data in motion.
+1. **Collection** is the acquisition of data in **motion**. The acquisition includes capabilities to "subscribe" to a data stream or to simulate the stream via quickly repeating API calls. if it is subscribed then data will be pushed  to it. Once the data is collected, it may then store it temporarily in-memory or a disk before passing it to Stream processor for near real-time processing of data. Data can also go through filtration before it being fed to the Stream processor. Data Collection aims at acquiring data in motion.
 
-2. **Extraction** is the acsition of data **at rest**. It is primarily a pull mechanism to feed the data into a system. It can also refer to crawling data from web pages. Data can be extracted from structured, semi-structured and unstructured data sources. Data extraction aims at acquiring static data.
+2. **Extraction** is the acquisition of data **at rest**. It is primarily a pull mechanism to feed the data into a system. It can also refer to crawling data from web pages. Data can be extracted from structured, semi-structured and unstructured data sources. Data extraction aims at acquiring static data.
 
 ---
 Data are analyzed using techniques such as calculation, reasoning, discussion, presentation, visualization, or other forms of post-analysis. Prior to analysis, raw data (or unprocessed data also known as primary data) are typically cleaned: Outliers are removed and obvious instrument or data entry errors are corrected.
@@ -105,17 +105,17 @@ Data analysis methodologies vary and include data triangulation and data percola
 
 Data processing is the execution of a function that receives a given data set as input, and that function will perform an action and/or return another data set as output.
 
-The data processing infrastructure that was developed to run business operations over the past decades is having trouble keeping pace with today's digital alndscape. Across every industry daily interactions and transactions are moving online and the business services are becoming increasingly automated. Volumes of multi-structured, machine-generated data from a variety of sources have skyrocketed,  and smart companies want to capture and make use of it all. As data volumes grow and the complexity of data types and sources increases, data processing workloads take longer to run and the time available and analysis is reduced.
+The data processing infrastructure that was developed to run business operations over the past decades is having trouble keeping pace with today's digital landscape. Across every industry daily interactions and transactions are moving online and the business services are becoming increasingly automated. Volumes of multi-structured, machine-generated data from a variety of sources have skyrocketed,  and smart companies want to capture and make use of it all. As data volumes grow and the complexity of data types and sources increases, data processing workloads take longer to run and the time available and analysis is reduced.
 
 The magnitude of 3Vs (Volume, Velocity and Variety) determines the computation power required to process data. Imagine the computational power required to process 20 petabytes of data within a day by Google, or analyzing 200 million tweets per day to derive trending topics on Twitter, or NYT processing 4TB worth of raw images into 11 Million finished PDFs in 24 hrs. So the challenge is not only because of tremendous volume of data, but also the speed (velocity) at which it is generated and the variety of sources from which it is produced.
 
-Various traditional technologies are available for high-perfromance computing which includes Cluster COmputing and Grid Computing. However, high cost of Cluster and non-reliability of Grid Computing make them unsuitable for Data processing. Cloud computing which though seems to be an ideal solution for Data processing too puts up constraints such as the need to transfer huge volumes of data across network.
+Various traditional technologies are available for high-performance computing which includes Cluster Computing and Grid Computing. However, high cost of Cluster and non-reliability of Grid Computing make them unsuitable for Data processing. Cloud computing which though seems to be an ideal solution for Data processing too puts up constraints such as the need to transfer huge volumes of data across network.
 
 The challenges for high-performance computing is on following parameters:
 
 - **Linear Horizontal Scalability:** The system should be able scale horizontally. More importantly than a system being scalable is a system being linearly scalable. A linear scalable system can maintain performance under increased load by adding resources in proportion to the increased load. A non-linear scalable system, while "scalable", isn't particular useful as it may not be feasible;
-- **Cost Effectiveness:** Economy of Scale is the most important criteria that need to be satisfied by any computation solution for data procesisng. Suppose the number of machines required in relation to the load on a system has a quadratic relationship, like in figure. Increasing the load ten folds would increase costs by a hundred. Such systems usually are not feasible from business perspective;
-- **Performance:** The system has to process data at an acceptable performance.  The various technologies used to process big data should be able to utilize the resource very efficiently in order to produce high throughput per unit of resource. Resources come with a cost, so it becomes important that economy of scale is maintained throughout the product life cycle. Example of resources are Memory, CPU, Network bandwith, etc;
+- **Cost Effectiveness:** Economy of Scale is the most important criteria that need to be satisfied by any computation solution for data processing. Suppose the number of machines required in relation to the load on a system has a quadratic relationship, like in figure. Increasing the load ten folds would increase costs by a hundred. Such systems usually are not feasible from business perspective;
+- **Performance:** The system has to process data at an acceptable performance.  The various technologies used to process big data should be able to utilize the resource very efficiently in order to produce high throughput per unit of resource. Resources come with a cost, so it becomes important that economy of scale is maintained throughout the product life cycle. Example of resources are Memory, CPU, Network bandwidth, etc;
 - **Minimum data transfer:** The architecture of data computing approach should restrict the movement of data over network. The computation needs to be taken near to data and not vice versa;
 - **Fault tolerance:** It should be possible for the system to continue the processing of data in the event of the failure of a part. Failures may be due to network partition, server crashes and disk breakdowns;
 - **Auto Elasticity:** It is ability of the resource to adjust to the incoming load. Resources should be able to scale up or scale down based as per the requirements at a given point of time;
@@ -135,10 +135,10 @@ The various types of data storage provided in Data Store are as following
 
 A Data storage solution should overcome the following challenges
 
-- **Preventing data loss:** When storage systems reach hundreds of terabytes in scale, derive failures and errors present a constant challenge. The traditional approach to protecting data against these failures is replication - creating one or more copies of the data to ensure that there is always a backup available in case of data loss. However, creating copies of the data eventually becomes difficult to sustain from a cost and administration standpoint. For instance, Cleversafe, Inc. published a paper that describes how current storage system based on RAID arrays were not designed tos cale to this type of data growth. As a result, the cost of RAID-based storage systems increases as the total amount of storage increases, while data protection degrades, resulting in permanent digital asset loss. With the capacity of storage devices today, RAID-based systems cannont protect data from loss. Most IT organizations using RAID for big storage incur additional cost to copy their data two or three times to protect it from inevitable data loss.
-- **Maintain High Availability of System:** End users and customers have grown to expect 24/7 access to data-downtime is unacceptable. Data must always be available during sotrage systems upgrades, drive failures, network outages-even during the failure of an entire data center.
-- **Protecting data from unathorized access:** Data must be protected from unauthorized access, both when it's "at rest" and when it's traversing the network. The massive scale of big data makes it difficult for organizations to identify and address potential security threats.
-- **Managing Economy of Scale:** Storage devices conitnue to grow in terms of capacity while declining in price (more bits per device at a lower cost). However, even as the price of cpaacity declines, the cost to power, cool, house, connect and manage that capacity continues to pose a challenge to budgets.
+- **Preventing data loss:** When storage systems reach hundreds of terabytes in scale, derive failures and errors present a constant challenge. The traditional approach to protecting data against these failures is replication - creating one or more copies of the data to ensure that there is always a backup available in case of data loss. However, creating copies of the data eventually becomes difficult to sustain from a cost and administration standpoint. For instance, Cleversafe, Inc. published a paper that describes how current storage system based on RAID arrays were not designed to scale to this type of data growth. As a result, the cost of RAID-based storage systems increases as the total amount of storage increases, while data protection degrades, resulting in permanent digital asset loss. With the capacity of storage devices today, RAID-based systems cannot protect data from loss. Most IT organizations using RAID for big storage incur additional cost to copy their data two or three times to protect it from inevitable data loss.
+- **Maintain High Availability of System:** End users and customers have grown to expect 24/7 access to data-downtime is unacceptable. Data must always be available during storage systems upgrades, drive failures, network outages-even during the failure of an entire data center.
+- **Protecting data from unauthorized access:** Data must be protected from unauthorized access, both when it's "at rest" and when it's traversing the network. The massive scale of big data makes it difficult for organizations to identify and address potential security threats.
+- **Managing Economy of Scale:** Storage devices continue to grow in terms of capacity while declining in price (more bits per device at a lower cost). However, even as the price of capacity declines, the cost to power, cool, house, connect and manage that capacity continues to pose a challenge to budgets.
 
 ### Security and Privacy
 
@@ -147,30 +147,30 @@ Data security and privacy deliver data protection across enterprise. Together, t
 **Data security** is protecting data, information, and systems from unauthorized access, use, disclosure, disruption, modification, or destruction in order to provide:
 
 - *Integrity:* Guarding against improper data modification or destruction, and includes ensuring data non-repudiation and authenticity;
-- *Confidenciality:* Preserving authorized restrictions on access and disclosure, including means for protecting personal privacy and proprietary data;
+- *Confidentiality:* Preserving authorized restrictions on access and disclosure, including means for protecting personal privacy and proprietary data;
 - *Availability*: Ensuring timely and reliable access to and use of data.
 
-**Data privacy** is the assured, proper, and consistent collection, processing, communication, use and disposition of data associatede with personal information (PI) and personally-identifiable information (PII) throughout its life cycle.
+**Data privacy** is the assured, proper, and consistent collection, processing, communication, use and disposition of data associated with personal information (PI) and personally-identifiable information (PII) throughout its life cycle.
 
-Security and Privacy are the major concerns in the data apllications. Application domains are health care, finance, governance and many other both from private and public sectors. These domains deal with very sensitive infomration suchc as Personal Health Record, Credit History, Personal Identity, etc. This data needs to be protected both to meet compliance requirements of each domain and to ensure the privacy of individuals.
+Security and Privacy are the major concerns in the data applications. Application domains are health care, finance, governance and many other both from private and public sectors. These domains deal with very sensitive information such as Personal Health Record, Credit History, Personal Identity, etc. This data needs to be protected both to meet compliance requirements of each domain and to ensure the privacy of individuals.
 
 ### Governance and Management
 
-Data systems gives enterprises ability to access, aggregate and analyze ever increasing amounts of data.It is an enormous opportunity to make information the leader of value creation, but without comprehensive principles, policies and frameworks, Data system can generate enormous risks. Data System needs governance framework that ensures trustworthy data practices. Without propoer governance, the same data that brings value to the organization, can also bring misfortune if its security and privacy is compromised. With effective data/information governance in place, business stakeholds tend to have greater trust and confidence in data. There is complete accountability throughout the lifecycle of information.
+Data systems gives enterprises ability to access, aggregate and analyze ever increasing amounts of data. It is an enormous opportunity to make information the leader of value creation, but without comprehensive principles, policies and frameworks, Data system can generate enormous risks. Data System needs governance framework that ensures trustworthy data practices. Without proper governance, the same data that brings value to the organization, can also bring misfortune if its security and privacy is compromised. With effective data/information governance in place, business stakeholders tend to have greater trust and confidence in data. There is complete accountability throughout the lifecycle of information.
 
-The volume of information coming into most companies has exploded in recent years, and many IT shops are dealing with extremely large data sets. It makes Data Governance and Management as the continuously evolving process. With data being stored for analytics, storage management tasks keep on growing. More drives and devices are needed to house the data. And to ensure high performance server CPUs are satiated, data must be slectively stored and moved to different storage tiers to meet the varying I/O and throughput performance characteristics of each application.
+The volume of information coming into most companies has exploded in recent years, and many IT shops are dealing with extremely large data sets. It makes Data Governance and Management as the continuously evolving process. With data being stored for analytics, storage management tasks keep on growing. More drives and devices are needed to house the data. And to ensure high performance server CPUs are satiated, data must be selectively stored and moved to different storage tiers to meet the varying I/O and throughput performance characteristics of each application.
 
 Business Intelligence extracted from new types of growing volumes of data has led companies to use dedicated systems optimized for the different business. This approach can make inefficient use of storage. Spare capacity in one effort goes idle, while another group's effort requires buying additional capacity. This increases CAPEX spending and its impact on IT budgets is compounded by an associated increase in OPEX costs as the added devices must be managed and amintained, take data center space, and must be powered and cooled.
 
 This approach also results in siloing which further complicates the matter. Siloing also prevents organizations from realizing the advantages of a whole-company view of its data. Additionally, since of the same data (a costumer sales database or stock market indices, for example) might be used by different groups for different purposes, having multiple versions of this data increases the total data volume.  It also increases the need for multiple data entry, which contriibutes to multiple versions of the truth.
 
-Making matters worse, by using an optimized storage solution to match the various analytics application's performance needs, there are often different storage product lines used throughout the organizations. Each type of storage system would typically have it sown storage managemnet system. This is often the case even if all of the systems come from one vendor.
+Making matters worse, by using an optimized storage solution to match the various analytics application's performance needs, there are often different storage product lines used throughout the organizations. Each type of storage system would typically have it sown storage management system. This is often the case even if all of the systems come from one vendor.
 
 All this had led to development of new tools to manage Data.
 
 ### Data Transfer
 
-Traditional WAN-based transport methods cannot move terabytes of data at the speed dictated by businesses; they use a fraction of available bandwidth and achieve transfer speeds that are unsuitable for such volumes, introducing unacceptable delays in moving data around. It is also not logical to move around terabytes of data in a day for processing on differents nodes.
+Traditional WAN-based transport methods cannot move terabytes of data at the speed dictated by businesses; they use a fraction of available bandwidth and achieve transfer speeds that are unsuitable for such volumes, introducing unacceptable delays in moving data around. It is also not logical to move around terabytes of data in a day for processing on different nodes.
 
 Other methods like moving the data physically by writing it to a disk and then transporting the physical disk too have limitations as by the time data reaches to a processing facility, it amy have already changed.
 
