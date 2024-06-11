@@ -1,5 +1,6 @@
 ---
 title: "DAG-based DLT Concepts"
+description: "Some brief description"
 categories: [DLT, Software]
 authors:
   - 0xthiagomartins

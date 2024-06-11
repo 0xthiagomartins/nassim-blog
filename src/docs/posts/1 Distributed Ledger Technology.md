@@ -1,5 +1,6 @@
 ---
 title: "Distributed Ledger Technology (DLT)"
+description: "Some brief description"
 categories: [DLT]
 authors:
   - 0xthiagomartins
