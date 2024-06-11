@@ -1,6 +1,5 @@
 ---
 title: "DAG-based DLT Concepts"
-description: "Some brief description"
 categories: [DLT, Software]
 authors:
   - 0xthiagomartins
@@ -10,6 +9,8 @@ date: 2024-05-31
 # DAG-based DLT
 
 A significant limitation of a single-chain topology is its ability to accept only one block at a time. But what if the network could accept multiple blocks simultaneously? This would not only increase the number of transactions processed but also reduce the waste incurred when the network discards all branches except one.
+
+<!-- more -->
 
 | ![image](https://github.com/cedricwalter/blockchain-consensus/assets/71234183/0c424468-4d28-430d-93bb-387f090e8210) |
 |:--:|

@@ -111,7 +111,6 @@ def define_env(env):
         rss_path = os.path.join(docs_folder, "rss.xml")
         with open(rss_path, "r", encoding="utf-8") as f:
             rss_content = f.read()
-
             root = ET.fromstring(rss_content)
             items = root.findall(".//item")
 
@@ -121,7 +120,6 @@ def define_env(env):
                 link = item.find("link").text
                 description = item.find("description").text
                 pub_date = item.find("pubDate").text
-                # Convert pub_date to the desired format
                 pub_date_parsed = datetime.strptime(
                     pub_date, "%a, %d %b %Y %H:%M:%S +0000"
                 )

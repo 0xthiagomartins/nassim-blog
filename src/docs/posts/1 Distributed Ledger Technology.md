@@ -1,6 +1,5 @@
 ---
 title: "Distributed Ledger Technology (DLT)"
-description: "Some brief description"
 categories: [DLT]
 authors:
   - 0xthiagomartins
@@ -12,7 +11,11 @@ date: 2024-06-02
 DLT is a general protocol and structure for recording data in a distributed and secure
 fashion. It emphasizes the presence of a system that is controlled by a distributed network
 and has no central control. DLT secures data through cryptography and distributes them
-across the network for storage. This technology is designed to establish trust between
+across the network for storage. 
+
+<!-- more -->
+
+This technology is designed to establish trust between
 parties that do not trust each other. Multiple copies of each record are kept and are linked
 together by a cryptographic algorithm, and all copies of data must be compromised for the
 intrusion to be successful.
