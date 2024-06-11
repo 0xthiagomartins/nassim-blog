@@ -58,7 +58,7 @@ def generate_rss():
                 fe.title(title)
                 fe.link(href=f'./posts/{filename.replace(".md", "")}')
                 fe.description(description)
-                fe.pubDate(pub_date.strftime("%a, %d %b %Y"))
+                fe.pubDate(pub_date.strftime("%a, %d %b %Y %H:%M:%S +0000"))
 
     fg.rss_file(os.path.join(docs_folder, "rss.xml"))
 

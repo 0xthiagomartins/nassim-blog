@@ -1,3 +1,4 @@
+from datetime import datetime
 import os
 import yaml
 from collections import defaultdict
@@ -120,8 +121,13 @@ def define_env(env):
                 link = item.find("link").text
                 description = item.find("description").text
                 pub_date = item.find("pubDate").text
+                # Convert pub_date to the desired format
+                pub_date_parsed = datetime.strptime(
+                    pub_date, "%a, %d %b %Y %H:%M:%S +0000"
+                )
+                pub_date_formatted = pub_date_parsed.strftime("%a, %d %b %Y")
 
-                feed_html += f'<li><a href="{link}">{title}</a><br><small>{pub_date}</small><p>{description}</p></li>'
+                feed_html += f'<li><a href="{link}">{title}</a><br><small>{pub_date_formatted}</small><p>{description}</p></li>'
             feed_html += "</ul>"
 
             return feed_html
