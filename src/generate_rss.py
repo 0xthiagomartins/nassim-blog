@@ -57,7 +57,9 @@ def generate_rss():
 
                 fe = fg.add_entry()
                 fe.title(title)
-                fe.link(href=f'./posts/{filename.replace(".md", "")}')
+                fe.link(
+                    href=f'https://{blog_domain}/posts/{filename.replace(".md", "")}'
+                )
                 fe.description(description)
                 fe.pubDate(pub_date.strftime("%a, %d %b %Y %H:%M:%S +0000"))
                 for category in categories:
