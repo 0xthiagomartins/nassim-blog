@@ -29,8 +29,8 @@
 
 [data-md-color-accent="nassim_accent"] {
     --md-accent-fg-color: var(--primary);
-    --md-accent-fg-color--transparent: var(--black);
-    --md-accent-bg-color: var(--neutral);
+    --md-accent-fg-color--transparent: var(--neutral);
+    --md-accent-bg-color: var(--black);
     --md-accent-bg-color--light: var(--white);
 }
 

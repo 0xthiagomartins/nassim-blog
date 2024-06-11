@@ -114,7 +114,7 @@ def define_env(env):
             root = ET.fromstring(rss_content)
             items = root.findall(".//item")
 
-            feed_html = "<h2>Blog RSS Feed</h2><ul>"
+            feed_html = "<h2>RSS Feed</h2><ul>"
             for item in items:
                 title = item.find("title").text
                 link = item.find("link").text
