@@ -142,7 +142,7 @@ A Data storage solution should overcome the following challenges
 
 ### Security and Privacy
 
-Data security and privacy deliver data protection across enterprise. Together, they comprise the people, process and technology required to prevent destructive forcces and unwanted actions.
+Data security and privacy deliver data protection across enterprise. Together, they comprise the people, process and technology required to prevent destructive forces and unwanted actions.
 
 **Data security** is protecting data, information, and systems from unauthorized access, use, disclosure, disruption, modification, or destruction in order to provide:
 
@@ -172,7 +172,7 @@ All this had led to development of new tools to manage Data.
 
 Traditional WAN-based transport methods cannot move terabytes of data at the speed dictated by businesses; they use a fraction of available bandwidth and achieve transfer speeds that are unsuitable for such volumes, introducing unacceptable delays in moving data around. It is also not logical to move around terabytes of data in a day for processing on different nodes.
 
-Other methods like moving the data physically by writing it to a disk and then transporting the physical disk too have limitations as by the time data reaches to a processing facility, it amy have already changed.
+Other methods like moving the data physically by writing it to a disk and then transporting the physical disk too have limitations as by the time data reaches to a processing facility, it may have already changed.
 
 New innovative techniques need to be employed to minimize transfer of data over the network.
 
