@@ -61,17 +61,18 @@ The concept of data about data is known as meta-data. It is also useful to disti
 
 ## Representation
 
-Mechanical computing devices are classified according to how they represent data. 
-- An **analog** computer represents a datum as a voltage, distance, position, or other physical quantity. 
+Mechanical computing devices are classified according to how they represent data.
+
+- An **analog** computer represents a datum as a voltage, distance, position, or other physical quantity.
 - A **digital** computer represents a piece of data as sequence of symbols drawn from a fixed alphabet. The most common digital computers use a binary alphabet, that is, an alphabet of two characters typically denoted "0" and "1".
 
 More familiar representations, such as numbers or letters, are then constructed from the binary alphabet. Some special forms of data are distinguished. A computer program is a collection of data, which can be interpreted as instructions. Most computer languages make a distinction between programs and the other data on which programs operate, but in some languages, notably Lisp and similar languages, programs are essentially indistinguishable from other data.
 
-# Challenges in a data system
+## Challenges in a data system
 
 As a reference architecture is abstract and designed with generality in mind, it is applicable in different contexts, where the concrete requirements of each context guide the adoption into a concrete architecture. The level of abstraction can however differ between reference architectures and with it the concreteness of guidance a reference architecture can offer
 
-## Acquisition (Collection and/or Extraction)
+### Acquisition (Collection and/or Extraction)
 
 Data are acquisited using techniques such as measurement, observation, query or analysis, and are typically represented as numbers or characters which may be further processed.
 
@@ -93,7 +94,7 @@ Data analysis methodologies vary and include data triangulation and data percola
 
 ---
 
-## Processing
+### Processing
 
 Data processing is the execution of a function that receives a given data set as input, and that function will perform an action and/or return another data set as output.
 
@@ -113,7 +114,7 @@ The challenges for high-performance computing is on following parameters:
 - **Auto Elasticity:** It is ability of the resource to adjust to the incoming load. Resources should be able to scale up or scale down based as per the requirements at a given point of time;
 - **Latency:** Latency is the delay within a system based on delays in execution of a task There is always a timeliness associated to an information that makes it valuable. So it very important that the latency of the system is such that data is available on time. Consistence and predictability in performance is very critical for data system especially the ones that perform analytics on the data. Latency is an issue in every aspect of computing, including communications, data management, system performance, and more. It can become a major challenge in real time and near-real-time applications.
 
-## Storage
+### Storage
 
 Companies today store large volumes of diverse data from web logs, click streams, sensors, and many other sources. The volume of this data crosses many terabytes and petabytes at times. Technically it is possible to store this amount of data on disks, however, challenge lies in cost effective means of data storage.
 
@@ -132,7 +133,7 @@ A Data storage solution should overcome the following challenges
 - **Protecting data from unathorized access:** Data must be protected from unauthorized access, both when it's "at rest" and when it's traversing the network. The massive scale of big data makes it difficult for organizations to identify and address potential security threats.
 - **Managing Economy of Scale:** Storage devices conitnue to grow in terms of capacity while declining in price (more bits per device at a lower cost). However, even as the price of cpaacity declines, the cost to power, cool, house, connect and manage that capacity continues to pose a challenge to budgets.
 
-## Security and Privacy
+### Security and Privacy
 
 Data security and privacy deliver data protection across enterprise. Together, they comprise the people, process and technology required to prevent destructive forcces and unwanted actions.
 
@@ -146,7 +147,7 @@ Data security and privacy deliver data protection across enterprise. Together, t
 
 Security and Privacy are the major concerns in the data apllications. Application domains are health care, finance, governance and many other both from private and public sectors. These domains deal with very sensitive infomration suchc as Personal Health Record, Credit History, Personal Identity, etc. This data needs to be protected both to meet compliance requirements of each domain and to ensure the privacy of individuals.
 
-## Governance and Management
+### Governance and Management
 
 Data systems gives enterprises ability to access, aggregate and analyze ever increasing amounts of data.It is an enormous opportunity to make information the leader of value creation, but without comprehensive principles, policies and frameworks, Data system can generate enormous risks. Data System needs governance framework that ensures trustworthy data practices. Without propoer governance, the same data that brings value to the organization, can also bring misfortune if its security and privacy is compromised. With effective data/information governance in place, business stakeholds tend to have greater trust and confidence in data. There is complete accountability throughout the lifecycle of information.
 
@@ -160,7 +161,7 @@ Making matters worse, by using an optimized storage solution to match the variou
 
 All this had led to development of new tools to manage Data.
 
-## Data Transfer
+### Data Transfer
 
 Traditional WAN-based transport methods cannot move terabytes of data at the speed dictated by businesses; they use a fraction of available bandwidth and achieve transfer speeds that are unsuitable for such volumes, introducing unacceptable delays in moving data around. It is also not logical to move around terabytes of data in a day for processing on differents nodes.
 
