@@ -5,3 +5,4 @@ mkdocs-awesome-pages-plugin
 mkdocs-bootswatch
 pyyaml
 toml
+feedgen

@@ -2,6 +2,9 @@ import os
 import yaml
 from collections import defaultdict
 import toml
+import xml.etree.ElementTree as ET
+
+docs_folder = "src/docs"
 
 
 def load_authors():
@@ -101,3 +104,24 @@ def define_env(env):
             footer.content += "</div>\n"
 
         return footer.content
+
+    @env.macro
+    def rss_feed():
+        rss_path = os.path.join(docs_folder, "rss.xml")
+        with open(rss_path, "r", encoding="utf-8") as f:
+            rss_content = f.read()
+
+            root = ET.fromstring(rss_content)
+            items = root.findall(".//item")
+
+            feed_html = "<h2>Blog RSS Feed</h2><ul>"
+            for item in items:
+                title = item.find("title").text
+                link = item.find("link").text
+                description = item.find("description").text
+                pub_date = item.find("pubDate").text
+
+                feed_html += f'<li><a href="{link}">{title}</a><br><small>{pub_date}</small><p>{description}</p></li>'
+            feed_html += "</ul>"
+
+            return feed_html

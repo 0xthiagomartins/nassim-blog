@@ -27,3 +27,5 @@ extra_css:
 extra:
   generator: false
   homepage: https://nassim.com.br
+  rss_feed_url: rss.xml # Adding the RSS feed URL to the extra config
+

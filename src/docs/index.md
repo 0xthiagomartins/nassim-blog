@@ -19,16 +19,7 @@ Nassim Blog is your go-to source for deep dives into the world of technology. Fr
 - **Web Development** - Learn how to build robust, scalable, and responsive web applications.
 - **Data Science** - Explore the world of data analysis, machine learning, and AI.
 
-## Popular Tags
-
-- `#JavaScript`
-- `#Blockchain`
-- `#WebDevelopment`
-- `#MachineLearning`
-- `#Python`
-- `#React`
-
-## About the Author
+## About the Authors
 
 Hello! I'm Nassim, a passionate software developer and tech enthusiast. With years of experience in the industry, I created this blog to share knowledge, tips, and insights on various technological topics. Whether you're a beginner or an experienced professional, you'll find something valuable here.
 
@@ -49,3 +40,10 @@ Stay updated with the latest posts and news. Subscribe to our newsletter!
 
 Thank you for visiting Nassim Blog. Happy reading!
 
+---
+
+# Welcome to My Blog
+
+Here is the RSS feed of my blog:
+
+{{ rss_feed() }}

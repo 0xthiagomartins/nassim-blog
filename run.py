@@ -1,5 +1,5 @@
 import subprocess, sys
-from src import generate_categories
+from src import generate_categories, generate_rss
 
 
 def run_mkdocs(port):
@@ -8,6 +8,7 @@ def run_mkdocs(port):
 
 
 if __name__ == "__main__":
+    generate_rss.generate_rss()
     if len(sys.argv) != 2:
         port = 8000
     else:
