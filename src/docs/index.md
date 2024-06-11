@@ -4,9 +4,11 @@ Welcome to the Nassim Blog! Explore insightful articles on technology, programmi
 
 Nassim Blog is your go-to source for deep dives into the world of technology. From cutting-edge advancements to practical coding tips, our blog covers a wide range of topics to keep you informed and inspired.
 
+<!-- Display RSS feed sorted by date -->
+{{ rss_feed(sort_by_date=True) }}
 
-{{ rss_feed() }}
-
+<!-- Display RSS feed filtered by category "Data" -->
+<!-- {{ rss_feed(category="Data") }} -->
 
 ## Get In Touch
 

@@ -35,9 +35,9 @@ def extract_excerpt(content):
 
 def generate_rss():
     fg = FeedGenerator()
-    fg.title("Your Blog Title")
+    fg.title("Nassim - Blog")
     fg.link(href=f"https://{blog_domain}")
-    fg.description("Your Blog Description")
+    fg.description("Blog Description")
     fg.language("en")
 
     posts_dir = os.path.join(docs_folder, "posts")
@@ -53,12 +53,15 @@ def generate_rss():
                 title = metadata.get("title", "No Title")
                 description = metadata.get("description", extract_excerpt(post_content))
                 pub_date = metadata.get("date", datetime.now())
+                categories = metadata.get("categories", [])
 
                 fe = fg.add_entry()
                 fe.title(title)
                 fe.link(href=f'./posts/{filename.replace(".md", "")}')
                 fe.description(description)
                 fe.pubDate(pub_date.strftime("%a, %d %b %Y %H:%M:%S +0000"))
+                for category in categories:
+                    fe.category(term=category)
 
     fg.rss_file(os.path.join(docs_folder, "rss.xml"))
 

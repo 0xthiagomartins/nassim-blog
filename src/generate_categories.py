@@ -42,6 +42,4 @@ for category, posts in categories.items():
     os.makedirs(category_dir, exist_ok=True)
     with open(os.path.join(category_dir, "index.md"), "w", encoding="utf-8") as f:
         f.write(f"# {category}\n\n")
-        for post in sorted(posts):
-            post_filename = post.split("/")[-1].replace(".md", "")
-            f.write(f"- [{post_filename}](../../posts/{post_filename})\n")
+        f.write("{{ rss_feed(category=" + f'"{category}"' + ") }}")

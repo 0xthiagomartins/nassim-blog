@@ -1,6 +1,8 @@
 ---
 title: "DAG-based DLT Concepts"
-categories: [DLT, Software]
+categories: 
+  - DLT
+  - Software
 authors:
   - 0xthiagomartins
 date: 2024-05-31

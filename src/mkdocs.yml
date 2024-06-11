@@ -14,7 +14,7 @@ plugins:
   - awesome-pages
 
 nav:
-  - Home: "."
+  - Feed: "."
   - Categories:
       - Data: categories/Data/index.md
       - DLT: categories/DLT/index.md

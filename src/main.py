@@ -107,14 +107,15 @@ def define_env(env):
         return footer.content
 
     @env.macro
-    def rss_feed():
+    def rss_feed(category=None, sort_by_date=False):
         rss_path = os.path.join(docs_folder, "rss.xml")
         with open(rss_path, "r", encoding="utf-8") as f:
             rss_content = f.read()
+
             root = ET.fromstring(rss_content)
             items = root.findall(".//item")
 
-            feed_html = "<h2>RSS Feed</h2><ul>"
+            feed_items = []
             for item in items:
                 title = item.find("title").text
                 link = item.find("link").text
@@ -124,8 +125,27 @@ def define_env(env):
                     pub_date, "%a, %d %b %Y %H:%M:%S +0000"
                 )
                 pub_date_formatted = pub_date_parsed.strftime("%a, %d %b %Y")
+                categories = [cat.text for cat in item.findall("category")]
 
-                feed_html += f'<li><a href="{link}">{title}</a><br><small>{pub_date_formatted}</small><p>{description}</p></li>'
+                if category and category not in categories:
+                    continue
+
+                feed_items.append(
+                    {
+                        "title": title,
+                        "link": link,
+                        "description": description,
+                        "pub_date": pub_date_formatted,
+                        "pub_date_parsed": pub_date_parsed,
+                    }
+                )
+
+            if sort_by_date:
+                feed_items.sort(key=lambda x: x["pub_date_parsed"], reverse=True)
+
+            feed_html = "<h2>Feed</h2><ul>"
+            for feed_item in feed_items:
+                feed_html += f'<li><a href="{feed_item["link"]}">{feed_item["title"]}</a><br><small>{feed_item["pub_date"]}</small><p>{feed_item["description"]}</p></li>'
             feed_html += "</ul>"
 
             return feed_html
