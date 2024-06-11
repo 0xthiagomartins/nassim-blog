@@ -10,7 +10,6 @@ date: 2024-06-10
 ---
 # Data
 
-
 In common usage, data are a collection of discrete or continuous values that convey information, describing the quantity, quality, facts, statiscs, other **basic units of meaning**, or simply sequences of symbols that may be further interpreted formally.
 
 <!-- more -->
@@ -24,6 +23,10 @@ Data may be used as variables in a computational process. Data may represent abs
 Thematically connected data presented in some relevant context can be viewed as *information*. Contextually connected pieces of information can then be described as *data insights or intelligence*. The stock of information, can then be described as *knowledge*. Data have been described as "the new oil of the digital economy".
 
 Data, information, knowledge and wisdom are closely related concepts, but each has its role concerning the other, and each term has its meaning. According to a common view, data is collected and analyzed; data only becomes information suitable for making decisions once it has been analyzed in some fashion. One can say that the extend to which a set of data is informative to someone depends on the extent to which it is unexpected by that person. The amount of information contained in a data stream may be characterized by its Shannon entropy
+
+| ![dikw](../assets/imgs/dikw.png) |
+| :--: |
+| *Data to Wisdom* |
 
 Knowledge is the awareness of its environment that some entity possesses, whereas data merely communicate that knowledge. For example, the entry in a  database specifying the height of Mount Everest is a datum that communicates a precisely-measured value. This measurement may be included in a book along with other data on Mount Everest to describe the mountain in a manner useful for those who wish to decide on the best method to climb it. An awareness of the characteristics represented by this data is knowledge.
 
@@ -41,11 +44,15 @@ Before the development of computing devices and machines, people had to manually
 Data can be broadly classified into two main types: qualitative and quantitative.
 
 1. **Qualitative/Categorical**: Non-numeric data that describes attributes or properties. Examples include names, labels, and descriptions.
-  - **Ordinal**: Categorical data with a meaningful order or ranking but no fixed interval between categories.
-  - **Nominal**: Categorical data without any inherent order. It labels variables without a quantitative value.
-2. **Quantitative**: Numeric data that can be measured and quantified. Examples include height, weight, and temperature.
-  - **Discrete**: Consists of distinct, separate values. It often represents counts and cannot be subdivided meaningfully.
-  - **Continuous**: Can take any value within a range. It represents measurements and can be divided into finer levels.
+    - **Ordinal**: Categorical data with a meaningful order or ranking but no fixed interval between categories.
+    - **Nominal**: Categorical data without any inherent order. It labels variables without a quantitative value.
+
+
+---
+
+1. **Quantitative**: Numeric data that can be measured and quantified. Examples include height, weight, and temperature.
+    - **Discrete**: Consists of distinct, separate values. It often represents counts and cannot be subdivided meaningfully.
+    - **Continuous**: Can take any value within a range. It represents measurements and can be divided into finer levels.
 
 | ![Data Types](../assets/imgs/data_type_diagram.png) |
 | :--: |
