@@ -11,3 +11,10 @@ description = "Software Developer"
 avatar = "http://github.com/SamuelPoiani.png"
 contacts = { email = "samuel.poiani@example.com", instagram = "samuelpoiani", x = "samuelpoiani", github = "samuelpoiani", telegram = "samuelpoiani", linkedin = "samuelpoiani", whatsapp = "+55 (11) 91964-6223" }
 donations = { ethereum = "0xE6339c6f56d44719b6ae1264ea9B4f5eD1710bbE", taraxa = "0xE6339c6f56d44719b6ae1264ea9B4f5eD1710bbE" }
+
+[shirou]
+name = "Gustavo Marques Garcia"
+description = "Cybersecurity Analyst"
+avatar = "https://github.com/Shirouuu.png"
+contacts = { email = "gustavomarquesgarcia1@gmail.com", x = "shirou1702", github = "Shirouuu", telegram = "syncsociety", whatsapp = "+55 (11) 93941-0424" }
+donations = { ethereum = "0xE6339c6f56d44719b6ae1264ea9B4f5eD1710bbE", taraxa = "0xE6339c6f56d44719b6ae1264ea9B4f5eD1710bbE" }
